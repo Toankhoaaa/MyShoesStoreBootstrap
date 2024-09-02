@@ -1,0 +1,3 @@
+<video id="myVideo-1" muted autoplay playsinline>
+    <source src="/assets/img/shoes-video/video.mp4">
+</video>

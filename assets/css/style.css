@@ -14,6 +14,10 @@
     opacity: 0.8;
 }
 
+.h-70{
+    height: 70%!important;
+}
+
 .my-logo{
     font-size: 20px;
     font-weight: 600;
@@ -42,7 +46,7 @@
     margin: 70px 0;
 }
 
-.carousel-item img{
+.img-slide-item img{
     transform: translateX(-50px) rotateZ(-50deg);
     object-fit: cover;
     filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.7));
@@ -64,7 +68,7 @@
 
 
 @media screen and (max-width: 567px){
-    .carousel-item img{
+    .img-slide-item img{
         transform: translateX(-20px) rotateZ(-50deg);
     }
     .title img{
@@ -81,7 +85,7 @@
 }
 
 @media screen and (min-width: 567px) and (max-width: 768px){
-    .carousel-item img{
+    .img-slide-item img{
         transform: translateX(-20px) rotateZ(-50deg);
     }
     .title img{
@@ -94,5 +98,15 @@
        
     .title p{
         display: none;
+    }
+}
+
+.list-btn{
+    display: none;
+}
+
+.product:hover{
+    .list-btn{
+        display: block;
     }
 }
