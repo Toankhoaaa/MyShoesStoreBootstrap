@@ -11,7 +11,6 @@ for (let img = 0; img < imgTypeShoes.length; img++){
 }
 
 const products = document.querySelectorAll('.product')
-console.log(products)
 function updateCarousel() {
     const width = window.innerWidth;
     const carouselInner = document.querySelector('.product-slider .carousel-inner');

@@ -18,6 +18,10 @@
     height: 70%!important;
 }
 
+.box-shadow{
+    box-shadow: 0 0 15px #ccc;
+}
+
 .my-logo{
     font-size: 20px;
     font-weight: 600;
@@ -109,4 +113,30 @@
     .list-btn{
         display: block;
     }
+}
+
+.img-wrapper{
+    position: relative;
+}
+
+.discount-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 5px;
+    width: fit-content;
+}
+
+.discount-text i{
+    position: relative;
+    font-size: 3rem;
+}
+
+.discount-text span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 12px;
+    transform: translate(15%, 100%);
 }
