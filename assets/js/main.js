@@ -63,3 +63,48 @@ function updateCarousel() {
 // Call the function on page load and window resize
 window.addEventListener('load', updateCarousel);
 window.addEventListener('resize', updateCarousel);
+
+var multipleCardCarousel = document.querySelector("#classicCarousel");
+ 
+var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+    interval: false,
+});
+var carouselWidth = $(".classic-slide .carousel-inner")[0].scrollWidth;
+var cardWidth = $(".classic-item").width();
+var scrollPosition = 0;
+$("#classicCarousel .carousel-control-next").on("click", function () {
+    if (scrollPosition < carouselWidth - cardWidth * 8) {
+        scrollPosition += cardWidth;
+        $("#classicCarousel .carousel-inner").animate(
+            { scrollLeft: scrollPosition },
+            600
+        );
+    }
+    else{
+        var carouselInner = document.querySelector('.classic-slide .carousel-inner');
+        var items = carouselInner.querySelectorAll('.classic-item');
+        carouselInner.appendChild(items[0]);
+        scrollPosition -= cardWidth;
+        $("#classicCarousel .carousel-inner").animate(
+            { scrollLeft: scrollPosition },
+            600
+        );
+    }
+});
+$("#classicCarousel .carousel-control-prev").on("click", function () {
+    if (scrollPosition > 0) {
+    scrollPosition -= cardWidth;
+    $("#classicCarousel .carousel-inner").animate(
+        { scrollLeft: scrollPosition },
+        600
+    );
+    }
+    else{
+        var carouselInner = document.querySelector('.classic-slide .carousel-inner');
+        var items = carouselInner.querySelectorAll('.classic-item');
+        var totalItems = items.length;
+        carouselInner.prepend(items[totalItems-1])
+        scrollPosition = 0;
+    }
+});
+  
